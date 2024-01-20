@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rupiah rupiah</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-base-200 min-h-screen">
+    <header class="bg-sky-800 text-white grid py-3">
+      <img
+        src="./FA_DIGICAMP_LOGO_WHITE.png"
+        alt="logo digicamp"
+        class="h-16 mx-16"
+      />
+      <input
+        type="text"
+        placeholder="input balance in rupiah"
+        id="balance"
+        class="input input-ghost w-full max-w-xs mx-auto my-4"
+      />
+      <h2 class="text-center font-semibold">balance:</h2>
+      <div class="flex justify-center items-center gap-9">
+        <select class="select select-ghost" id="currencySelector">
+          <option value="IDR|id-ID">IDR</option>
+          <option value="USD|en-US">USD</option>
+          <option value="JPY|jp-JP">JPY</option>
+          <option value="CNY|cn-CN">CNY</option>
+        </select>
+        <h1 class="text-4xl font-thin" id="mainBalance"></h1>
+      </div>
+    </header>
+    <div class="container flex flex-col">
+      <h2
+        class="text-center w-[320px] text-sky-800 mx-auto font-bold text-semibold my-8"
+      >
+        Currency List
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
+        <div class="card w-72 bg-slate-50 shadow-xl">
+          <div class="card-body flex flex-row items-center justify-between">
+            <div class="info flex gap-2">
+              <img
+                src="https://flagsapi.com/US/flat/64.png"
+                class="h-[45px] w-[45px]"
+              />
+              <div>
+                <h3 class="uppercase font-bold text-xl">USD</h3>
+                <h3 class="text-zinc-700 text-xs">$1.500</h3>
+              </div>
+            </div>
+            <h2 class="font-bold text-xl">$ 1.500</h2>
+          </div>
+        </div>
+        <div class="card w-72 bg-slate-50 shadow-xl">
+          <div class="card-body flex flex-row items-center justify-between">
+            <div class="info flex gap-2">
+              <img
+                src="https://flagsapi.com/CN/flat/64.png"
+                class="h-[45px] w-[45px]"
+              />
+              <div>
+                <h3 class="uppercase font-bold text-xl">CNY</h3>
+                <h3 class="text-zinc-700 text-xs">¥ 200</h3>
+              </div>
+            </div>
+            <h2 class="font-bold text-xl">¥ 900</h2>
+          </div>
+        </div>
+        <div class="card w-72 bg-slate-50 shadow-xl">
+          <div class="card-body flex flex-row items-center justify-between">
+            <div class="info flex gap-2">
+              <img
+                src="https://flagsapi.com/JP/flat/64.png"
+                class="h-[45px] w-[45px]"
+              />
+              <div>
+                <h3 class="uppercase font-bold text-xl">JPY</h3>
+                <h3 class="text-zinc-700 text-xs">¥ 120</h3>
+              </div>
+            </div>
+            <h2 class="font-bold text-xl">¥ 300</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
